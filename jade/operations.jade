@@ -1,0 +1,126 @@
+include head
+body
+	.total
+		.wrapper.main
+			img(src="img/storage.jpg" alt="" usemap="#map" class="storage")
+
+			map#Map(name='map')
+				area(id="purplebox", class="area", alt='', title='', href='#', shape='poly', coords='561,829,562,904,636,903,657,889,656,814,634,826')
+				area(id="bluebox", class="area", alt='', title='', href='#', shape='poly', coords='563,801,635,800,658,790,657,713,590,713,571,721')
+				area(id="orangebox", class="area", alt='', title='', href='#', shape='poly', coords='1053,760,1054,833,1122,835,1118,762')
+				area(id="pep", class="area", alt='', title='', href='#', shape='poly', coords='1012,742,996,742,980,757,972,796,971,833,962,879,1003,886,1018,792')
+
+			//- TEXTOS SOBRE MOUSE
+			.purplebox.dcdesign DC DESIGN
+			.purplebox.dcopt DC OPTIMIZATION
+			.purplebox.projectimp  PROJECT IMPLEMENTATION MANAGEMENT SERVICES
+			.purplebox.labor  Labor
+
+			img(class="logo" src="img/logo-w.png")
+			ul.menu
+				a(href="index.html"): li.blue.whitetxt Home
+				a(href="wedo.html"): li.purple.whitetxt What we do
+				a(href="weare.html"): li.yellow.whitetxt Who we are
+				a(href="contact.html"): li.green.whitetxt Contact
+
+		
+		#DCDESIGN.sidetext.purpleside
+			img(class="close" title="close" alt="close" id="close" src="img/close.png")
+			img(class="sideicon" src="img/building.png")
+			h2 OPERATIONAL TRANSFORMATION
+			h3 DC DESIGN
+			p
+				
+				|• RIGHT SIZING OF DC’S & EXPANSIONS
+				br
+				br
+				|• DETERMINE OPTIMAL MATERIAL HANDLING SYSTEM DESIGN EVALUATION OF AUTOMATION AND E-COMMERCE SOLUTIONS
+				br
+				br
+				|• DETERMINE OPTIMUM LAYOUT & OPERATIONS BY DEPARTMENT
+				br
+				br
+				|• MASTER SITE PLANNING
+				br
+				br
+				|• OMNICHANNEL STRATEGY AND DESIGN
+
+			.divline
+			h3 Want to learn more?
+			.actionbutton  Click here	
+
+		#dcoptim.sidetext.purpleside
+			img(class="close" title="close" alt="close" id="close" src="img/close.png")
+			img(class="sideicon" src="img/building.png")
+			h2 OPERATIONAL TRANSFORMATION
+			h3 DC OPTIMIZATION
+			p
+				
+				|• RESET & OPTIMIZATION OF EXISTING DC’S
+				br
+				br
+				|• PRODUCTIVITY ASSESSMENT & BENCHMARKING SERVICES
+				br
+				br
+				|• EVALUATE ALTERNATIVE OPERATING STRATEGIES TO MAXIMIZE EFFICIENCIES. SPACE UTILIZATION AND FACILITY LIFETIME
+				br
+				br
+				|• DEVELOP ALTERNATIVE OPERATING STRATEGIES
+				br
+				br
+				|• SLOTTING ENHANCEMENT EVALUATION
+
+
+			.divline
+			h3 Want to learn more?
+			.actionbutton  Click here	
+
+		#dcimp.sidetext.purpleside
+			img(class="close" title="close" alt="close" id="close" src="img/close.png")
+			img(class="sideicon" src="img/building.png")
+			h2 OPERATIONAL TRANSFORMATION
+			h3 PROJECT IMPLEMENTATION MANAGEMENT SERVICES
+			p
+				
+				|• OPERATIONAL AUDITS & CONSULTING
+				br
+				br
+				|• IDENTIFICATION OF SYSTEMS AND MECHANICAL APPLICATIONS, DEVELOPING EQUIPMENT REQUEST FOR QUOTATIONS, MANAGING THE BIDDING PROCESS AND REVIEWING THE RESPONSES
+				br
+				br
+				|• ESTABLISHING THE SLOTTING METHODOLOGY AND OPERATIONAL APPLICATIONS
+				br
+				br
+				|• PERFORM FINAL SLOTTING & MOVE PLANNING
+				br
+				br
+				|• REVIEW OF ARCHITECTURAL AND ENGINEERING DRAWINGS
+				br
+				br
+				|• DEVELOPING CREWING REQUIREMENTS
+
+			.divline
+			h3 Want to learn more?
+			.actionbutton  Click here	
+		
+		#labor.sidetext.purpleside
+			img(class="close" title="close" alt="close" id="close" src="img/close.png")
+			img(class="sideicon" src="img/building.png")
+			h2 OPERATIONAL TRANSFORMATION
+			h3 LABOR
+			p
+				
+				|• OPTIMIZE LABOR PRODUCTIVITY, STORAGE / FRONTING CAPACITY & ACCURACY
+
+				
+			.divline
+			h3 Want to learn more?
+			.actionbutton  Click here	
+
+		//- footer
+		include footer
+	
+	script(src="js/jquery.min.js")
+	script(src="js/jquery.rwdImageMaps.min.js")
+	script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
+	script(src="js/sideanimations.js")

@@ -1,0 +1,46 @@
+$space: 15px
+$sans: Helvetica, Arial, sans-serif
+
+
+//MENU COLORS
+$purple: #9A2298
+$pink: #D5519D
+$yellow: #FFB200
+$orange: #E26917
+$green: #AFE200
+$gray: #4D4D4D
+$blue: #0087CB
+$skyblue: #5EACFD
+
+
+$spacer: 50px
+$din-black: "DINPro-black"
+$din-bold: "DINPro-bold"
+$din-mid: "DINPro-medium"
+$myriad: "Myriadpro-regular"
+html, body
+	font-family: $sans
+	line-height: 170%
+	font-size: 13px
+.over
+	overflow: hidden
+a
+	text-decoration: none
+	color: white
+img
+	max-width: 100%
+.wrapper
+	max-width: 100%
+.main
+	height: 100%
+	position: relative
+.half
+	+col(1/2)
+.center
+	+center(900px)
+.clear
+	margin-top: $spacer
+	margin-bottom: $spacer
+
+img[usemap], map area
+	outline: none

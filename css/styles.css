@@ -1,0 +1,915 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+/* line 5, ../sass/_reset.sass */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, ../sass/_reset.sass */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, ../sass/_reset.sass */
+body {
+  line-height: 1;
+}
+
+/* line 33, ../sass/_reset.sass */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, ../sass/_reset.sass */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, ../sass/_reset.sass */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 44, ../sass/_reset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
+/* line 21, ../sass/_units.sass */
+html, body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 170%;
+  font-size: 13px;
+}
+
+/* line 25, ../sass/_units.sass */
+.over {
+  overflow: hidden;
+}
+
+/* line 27, ../sass/_units.sass */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 30, ../sass/_units.sass */
+img {
+  max-width: 100%;
+}
+
+/* line 32, ../sass/_units.sass */
+.wrapper {
+  max-width: 100%;
+}
+
+/* line 34, ../sass/_units.sass */
+.main {
+  height: 100%;
+  position: relative;
+}
+
+/* line 37, ../sass/_units.sass */
+.half {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+/* line 344, ../sass/_grid.scss */
+.half:before, .half:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/_grid.scss */
+.half:after {
+  clear: both;
+}
+/* line 58, ../sass/_grid.scss */
+.half:last-child {
+  margin-right: 0%;
+}
+
+/* line 39, ../sass/_units.sass */
+.center {
+  *zoom: 1;
+  width: auto;
+  max-width: 900px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 344, ../sass/_grid.scss */
+.center:before, .center:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/_grid.scss */
+.center:after {
+  clear: both;
+}
+
+/* line 41, ../sass/_units.sass */
+.clear {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* line 45, ../sass/_units.sass */
+img[usemap], map area {
+  outline: none;
+}
+
+@font-face {
+  font-family: "DINPro-black";
+  src: url('/fonts/../fonts/DINPro-Black.otf?1143654360') format('opentype');
+}
+@font-face {
+  font-family: "DINPro-bold";
+  src: url('/fonts/../fonts/DINPro-Bold.otf?1143654360') format('opentype');
+}
+@font-face {
+  font-family: "DINPro-medium";
+  src: url('/fonts/../fonts/DINPro-Medium.ttf?1451951987') format('truetype');
+}
+@font-face {
+  font-family: "Myriadpro-regular";
+  src: url('/fonts/../fonts/MYRIADPRO-REGULAR.otf?1284242364') format('opentype');
+}
+/* line 1, ../sass/_menu.sass */
+.logo {
+  *zoom: 1;
+  width: auto;
+  max-width: 900px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 250px;
+  position: absolute;
+  top: 15px;
+  left: 75px;
+}
+/* line 344, ../sass/_grid.scss */
+.logo:before, .logo:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/_grid.scss */
+.logo:after {
+  clear: both;
+}
+
+/* line 7, ../sass/_menu.sass */
+.menu {
+  position: absolute;
+  z-index: 20;
+  top: 52.5px;
+  right: 75px;
+}
+/* line 12, ../sass/_menu.sass */
+.menu ul {
+  right: 15px;
+}
+/* line 14, ../sass/_menu.sass */
+.menu ul, .menu li {
+  width: 90px;
+  display: inline-block;
+  padding: 15px;
+  text-align: center;
+  font-family: "DINPro-medium";
+  color: #4D4D4D;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-left: 10px;
+  transition: background-color 0.5s ease;
+}
+/* line 27, ../sass/_menu.sass */
+.menu .blue {
+  border-top: 10px solid #0087CB;
+}
+/* line 29, ../sass/_menu.sass */
+.menu .blue:hover {
+  background: #0087CB;
+  color: white;
+}
+/* line 33, ../sass/_menu.sass */
+.menu .purple {
+  border-top: 10px solid #9A2298;
+}
+/* line 35, ../sass/_menu.sass */
+.menu .purple:hover {
+  background: #9A2298;
+  color: white;
+}
+/* line 38, ../sass/_menu.sass */
+.menu .pink {
+  border-top: 10px solid #D5519D;
+}
+/* line 40, ../sass/_menu.sass */
+.menu .pink:hover {
+  background: #D5519D;
+  color: white;
+}
+/* line 43, ../sass/_menu.sass */
+.menu .yellow {
+  border-top: 10px solid #FFB200;
+}
+/* line 45, ../sass/_menu.sass */
+.menu .yellow:hover {
+  background: #FFB200;
+  color: white;
+}
+/* line 48, ../sass/_menu.sass */
+.menu .green {
+  border-top: 10px solid #AFE200;
+}
+/* line 50, ../sass/_menu.sass */
+.menu .green:hover {
+  background: #AFE200;
+  color: white;
+}
+/* line 53, ../sass/_menu.sass */
+.menu .select {
+  border-top: 10px solid white;
+  color: white;
+}
+/* line 56, ../sass/_menu.sass */
+.menu .select:hover {
+  background: white;
+  color: #4D4D4D;
+}
+/* line 59, ../sass/_menu.sass */
+.menu .whitetxt {
+  color: white;
+}
+
+/* line 2, ../sass/_header.sass */
+.section_bg {
+  height: 400px;
+}
+/* line 4, ../sass/_header.sass */
+.section_bg h1 {
+  font-family: "DINPro-medium";
+  font-size: 3.5em;
+  color: white;
+  text-align: center;
+  padding-top: 255px;
+  text-transform: uppercase;
+}
+
+/* line 11, ../sass/_header.sass */
+.orangebg {
+  background: #E26917;
+}
+
+/* line 13, ../sass/_header.sass */
+.purplebg {
+  background: #9A2298;
+}
+
+/* line 15, ../sass/_header.sass */
+.greenbg {
+  background: #AFE200;
+}
+
+/* line 1, ../sass/_landing.sass */
+.land {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 7, ../sass/_landing.sass */
+.hometext {
+  position: relative;
+  z-index: 10;
+}
+
+/* line 1, ../sass/_bgmaps.sass */
+.worldbg, .storage, .techbg {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 5, ../sass/_bgmaps.sass */
+.worldbg {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+/* line 9, ../sass/_bgmaps.sass */
+.dots {
+  position: relative;
+  z-index: 10;
+}
+
+/* line 13, ../sass/_bgmaps.sass */
+.blink {
+  animation: blink 2s steps(5, start) infinite;
+  -webkit-animation: blink 2s steps(5, start) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* sobre mouse */
+/* line 37, ../sass/_bgmaps.sass */
+.total {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 42, ../sass/_bgmaps.sass */
+.hoverbox, .orangebox, .purplebox, .bluebox {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  width: 150px;
+  border: 7px solid black;
+  font-size: 1.3em;
+  position: absolute;
+  padding: 10px;
+  z-index: 10;
+  display: none;
+}
+
+/* line 53, ../sass/_bgmaps.sass */
+.orangebox {
+  background: orange;
+}
+
+/* line 57, ../sass/_bgmaps.sass */
+.purplebox {
+  background: #9A2298;
+}
+
+/* line 61, ../sass/_bgmaps.sass */
+.bluebox {
+  background: #5EACFD;
+}
+
+/* line 65, ../sass/_bgmaps.sass */
+#dist, #transport, #insource, #evaluation, #DCDESIGN, #dcoptim,
+#dcimp, #labor, #systems, #elearning, #automation {
+  display: none;
+}
+
+/* line 69, ../sass/_bgmaps.sass */
+.orangeside {
+  background: orange;
+}
+/* line 71, ../sass/_bgmaps.sass */
+.orangeside .divline {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: #E26917;
+  height: 7px;
+}
+/* line 76, ../sass/_bgmaps.sass */
+.orangeside .actionbutton {
+  background: white;
+  color: orange;
+  text-align: center;
+  width: 50%;
+  padding: 10px 0;
+  margin: 15px 0 75px 0;
+  font-size: 1.5em;
+}
+
+/* line 85, ../sass/_bgmaps.sass */
+.purpleside {
+  background: #9A2298;
+}
+/* line 87, ../sass/_bgmaps.sass */
+.purpleside .divline {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: #70196f;
+  height: 7px;
+}
+/* line 92, ../sass/_bgmaps.sass */
+.purpleside .actionbutton {
+  background: white;
+  color: #70196f;
+  text-align: center;
+  width: 50%;
+  padding: 10px 0;
+  margin: 15px 0 75px 0;
+  font-size: 1.5em;
+}
+
+/* line 101, ../sass/_bgmaps.sass */
+.blueside {
+  background: #5EACFD;
+}
+/* line 103, ../sass/_bgmaps.sass */
+.blueside .divline {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: #2c92fc;
+  height: 7px;
+}
+/* line 108, ../sass/_bgmaps.sass */
+.blueside .actionbutton {
+  background: white;
+  color: #2c92fc;
+  text-align: center;
+  width: 50%;
+  padding: 10px 0;
+  margin: 15px 0 75px 0;
+  font-size: 1.5em;
+}
+
+/* line 117, ../sass/_bgmaps.sass */
+.sidetext {
+  color: white;
+  position: absolute;
+  top: 0;
+  height: 102%;
+  right: -60px;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+  padding: 0px 60px;
+  font-family: "DINPro-medium";
+  overflow: scroll;
+  text-transform: uppercase;
+  z-index: 30;
+}
+/* line 344, ../sass/_grid.scss */
+.sidetext:before, .sidetext:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/_grid.scss */
+.sidetext:after {
+  clear: both;
+}
+/* line 58, ../sass/_grid.scss */
+.sidetext:last-child {
+  margin-right: 0%;
+}
+/* line 129, ../sass/_bgmaps.sass */
+.sidetext .sideicon {
+  margin-top: 75px;
+  height: 50px;
+}
+/* line 132, ../sass/_bgmaps.sass */
+.sidetext .close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  width: 40px;
+  right: 30px;
+}
+/* line 138, ../sass/_bgmaps.sass */
+.sidetext h2 {
+  margin-top: 15px;
+  font-size: 2.5em;
+  line-height: 110%;
+}
+/* line 142, ../sass/_bgmaps.sass */
+.sidetext h3 {
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+/* line 145, ../sass/_bgmaps.sass */
+.sidetext p {
+  margin-top: 30px;
+  font-family: "DINPro-medium";
+}
+
+/* line 1, ../sass/_weare.sass */
+.y_quote {
+  color: #E26917;
+  font-size: 2em;
+  line-height: 140%;
+}
+
+/* line 5, ../sass/_weare.sass */
+hr {
+  height: 4px;
+  background: #FFB200;
+  border: none;
+}
+
+/* line 10, ../sass/_weare.sass */
+.boss {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+/* line 344, ../sass/_grid.scss */
+.boss:before, .boss:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/_grid.scss */
+.boss:after {
+  clear: both;
+}
+/* line 58, ../sass/_grid.scss */
+.boss:last-child {
+  margin-right: 0%;
+}
+
+/* line 14, ../sass/_weare.sass */
+.bio .title {
+  font-size: 1.5em;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+/* line 19, ../sass/_weare.sass */
+.biopic {
+  border-radius: 180px;
+  width: 200px;
+}
+
+/* line 23, ../sass/_weare.sass */
+.maintext {
+  color: gray;
+  display: flex;
+  font-size: 1.3em;
+  line-height: 140%;
+}
+
+/* line 29, ../sass/_weare.sass */
+.italic {
+  font-style: italic;
+}
+
+/* line 2, ../sass/_wedo.sass */
+.feature {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333%;
+  margin-left: 0%;
+  margin-right: 3%;
+  text-align: center;
+}
+/* line 344, ../sass/_grid.scss */
+.feature:before, .feature:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/_grid.scss */
+.feature:after {
+  clear: both;
+}
+/* line 58, ../sass/_grid.scss */
+.feature:last-child {
+  margin-right: 0%;
+}
+/* line 5, ../sass/_wedo.sass */
+.feature img {
+  max-width: 170px;
+}
+/* line 7, ../sass/_wedo.sass */
+.feature h2 {
+  font-family: "DINPro-medium";
+  font-size: 1.5em;
+  color: gray;
+}
+
+/* line 1, ../sass/_contact.sass */
+.contact-card {
+  *zoom: 1;
+  width: auto;
+  max-width: 500px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  color: gray;
+  font-size: 1.2em;
+}
+/* line 344, ../sass/_grid.scss */
+.contact-card:before, .contact-card:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/_grid.scss */
+.contact-card:after {
+  clear: both;
+}
+/* line 6, ../sass/_contact.sass */
+.contact-card a {
+  color: gray;
+  font-weight: 600;
+}
+
+/* line 2, ../sass/_footer.sass */
+.footer {
+  position: relative;
+  background-color: black;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.5em;
+  bottom: 0;
+}
+
+/* line 10, ../sass/_footer.sass */
+.quote {
+  text-align: left;
+  letter-spacing: 2px;
+  font-size: 1.4em;
+  line-height: 130%;
+}
+
+/* line 15, ../sass/_footer.sass */
+.autor {
+  text-align: right;
+}
+
+/* line 18, ../sass/_footer.sass */
+.service {
+  margin-top: 15px;
+}
+/* line 20, ../sass/_footer.sass */
+.service img {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 5.58333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+/* line 344, ../sass/_grid.scss */
+.service img:before, .service img:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/_grid.scss */
+.service img:after {
+  clear: both;
+}
+/* line 58, ../sass/_grid.scss */
+.service img:last-child {
+  margin-right: 0%;
+}
+/* line 22, ../sass/_footer.sass */
+.service .text {
+  font-family: "DINPro-medium";
+  display: flex;
+  font-size: 14px;
+  line-height: 130%;
+}
+/* line 27, ../sass/_footer.sass */
+.service .center {
+  text-align: center;
+}
+/* line 29, ../sass/_footer.sass */
+.service i {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+/* line 34, ../sass/_footer.sass */
+.service i a {
+  font-size: 14px;
+}
+/* line 36, ../sass/_footer.sass */
+.service .phone {
+  font-family: "DINPro-bold";
+  display: inline-block;
+  padding-left: 15px;
+}
+
+/* line 43, ../sass/_footer.sass */
+.divider {
+  background-image: url("../img/divider.png");
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  height: 6px;
+  width: 100%;
+}
+
+/* line 52, ../sass/_footer.sass */
+.usual-footer {
+  background: black;
+  position: relative;
+}
+/* line 55, ../sass/_footer.sass */
+.usual-footer img {
+  max-width: 600px;
+  padding: 15px 75px;
+}
+/* line 58, ../sass/_footer.sass */
+.usual-footer .purpletag {
+  text-transform: uppercase;
+  font-family: "DINPro-bold";
+  font-size: 1.3em;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 75px;
+  padding: 5px 15px;
+  background: #9A2298;
+}
+
+/* @import _responsive */

@@ -1,0 +1,136 @@
+include head
+body
+	.total
+		.wrapper.main
+			img(src="img/worldfull.jpg" alt=""  , class="worldbg")
+			
+			img(src="img/dots.png" ,usemap="#map" class="dots blink")
+			map#Map(name='map')
+
+				area(id="orangeclick", class="area", alt='', title='', href='#', shape='poly', coords='346,888,348,928,387,930,386,890')
+				area(id='purpleclick', class="area", title='', href='#', shape='poly', coords='265,653,270,681,293,680,293,658')
+				area(id="blueclick", class="area", href='#', shape='poly', coords='395,763,417,763,422,790,394,788')
+				area(id="pinkclick",class="area", href='#', shape='poly', coords='599,674,602,702,630,702,627,672')
+			
+
+
+			//- TEXTOS SOBRE MOUSE
+			.orangebox.distribution Distribution Network Optimization
+			.orangebox.trans Transportation Optimization
+			.orangebox.ins INSOURCING VS. OUTSOURCING
+			.orangebox.eval 3PL EVALUATION & SELECTION
+
+			img(class="logo" src="img/logo.png")
+			ul.menu
+				a(href="index.html"): li.blue Home
+				a(href="wedo.html"): li.purple What we do
+				a(href="weare.html"): li.yellow Who we are
+				a(href="contact.html"): li.green Contact
+
+		#dist.sidetext.orangeside
+			img(class="close" title="close" alt="close" id="close" src="img/close.png")
+			img(class="sideicon" src="img/truck.png")
+			h2 Distribution network optimization
+			h3 Optimization for supply chain networks
+			p
+				|OUR BOTTOM-UP APPROACH ENSURES THAT ALL OF
+				| OUR RECOMMENDATIONS ARE PRACTICAL AND CAN BE
+				|SUCCESSFULLY IMPLEMENTED TRACING ALL ASPECTS
+				|OF THE NETWORK TO DETAILED DATA.
+				br
+				br
+				|OUR GOAL IS TO ANSWER COMPLEX QUESTIONS SUCH
+				|AS:
+				br
+				br
+				|• HOW CAN I BEST SERVE MY EXISTING AND FUTURE
+				|MARKETS?
+				br
+				br
+				|• HOW MANY DISTRIBUTION CENTERS SHOULD I HAVE?
+				br
+				br
+				|•WHERE SHOULD THEY BE LOCATED?
+				br
+				br
+				|• HOW BIG SHOULD THEY BE?
+				br
+				br
+				|• WHAT ITEMS SHOULD BE STOCKED AT EACH DC?
+				br
+				br
+				|• WHAT IS THE IMPACT OF CHANGING INVENTORY
+				|LEVELS?
+				br
+				br
+				|• WHAT IS THE ROADMAP IN YEARS FOR ME TO ALLOCATE
+				|CAPITAL AND PLAN EXPANSIONS?
+				br
+				br
+				|• HOW SHOULD EACH DC OPERATE INSIDE THE 4 WALLS
+				br
+				br
+				|• SHOULD I USE AUTOMATION, MECHANIZATION,
+				|CONVENTIONAL SYSTEMS OR A HYBRID?
+				br
+				br
+				|• HOW CAN I BEST REUSE EXISTING CAPACITY?
+			.divline
+			h3 Want to learn more?
+			.actionbutton  Click here
+
+		#transport.sidetext.orangeside
+			img(class="close" title="close" alt="close"  src="img/close.png")
+			img(class="sideicon" src="img/truck.png")
+			H2 Distribution network optimization
+			h3 TRANSPORTATION OPTIMIZATION
+			
+			p  
+				|• PERFORM DETAILED ROUTING TO OPTIMIZE YOUR FLEET OR CARRIER
+				br
+				br
+				|• Evaluating transportation budgets and operations to identify cost savings and service improvement opportunities
+			.divline
+			h3 Want to learn more?
+			.actionbutton  Click here
+
+		#insource.sidetext.orangeside
+			img(class="close" title="close" alt="close"  src="img/close.png")
+			img(class="sideicon" src="img/truck.png")
+			h2 Distribution network optimization
+			h3 INSOURCING VS. OUTSOURCING
+			p
+				br
+				br
+				| • EVALUATING THE economics OF OUTSOURCING versus self-distribution of warehouse operations considering a third party service provider (3pl) or other distributors.
+				br
+				br
+				| • EVALUATE CURRENT DISTRIBUTION OPERATIONS AND DETERMINE AN IMPROVED BENCHMARK TO COMPARE TO A 3PL PROVIDER. 
+				br
+				br
+				| • PERFORM FINANCIAL & OPERATIONAL DISTRIBUTION MODELLING
+			.divline
+			h3 Want to learn more?
+			.actionbutton  Click here
+
+		#evaluation.sidetext.orangeside
+			img(class="close" title="close" alt="close"  src="img/close.png")
+			img(class="sideicon" src="img/truck.png")
+			h2 Distribution network optimization
+			h3 3PL EVALUATION & SELECTION
+			p 
+				| • DEVELOP A 3PL OUTSOURCING REQUEST FOR PROPOSAL THAT IS SPECIFIC TO YOUR BUSINESS NEEDS.
+				br
+				br
+				| • PERFORM DETAILED ROUTING TO OPTIMIZE YOUR FLEET OR CARRIER
+			.divline
+			h3 Want to learn more?
+			.actionbutton  Click here
+
+		//- footer
+		include footer
+
+	script(src="js/jquery.min.js")
+	script(src="js/jquery.rwdImageMaps.min.js")
+	script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
+	script(src="js/sideanimations.js")

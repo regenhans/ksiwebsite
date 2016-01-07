@@ -1,0 +1,33 @@
+include head
+
+body
+	.wrapper.section_bg.purplebg
+		img(class="logo" src="img/logo-w.png")
+		ul.menu
+			a(href="index.html"): li.blue.whitetxt Home
+			a(href="wedo.html"): li.select What we do
+			a(href="weare.html"): li.yellow.whitetxt Who we are
+			a(href="contact.html"): li.green.whitetxt Contact
+		h1 WHAT WE DO
+	.center.clear
+		.feature
+			a(href="strategic.html")
+				img(src="img/bus.png")
+			h2.clear
+				| DISTRIBUTION
+				| NETWORK
+				| OPTIMIZATION
+		.feature
+			a(href="operations.html")
+				img(src="img/city.png")
+			h2.clear
+				| OPERATIONAL TRANSFORMATION
+
+		.feature
+			a(href="advancedtech.html")
+				img(src="img/pc.png")
+			h2.clear
+				| ADVANCED TECHNOLOGIES
+
+	//- footer
+	include footer

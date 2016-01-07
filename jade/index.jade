@@ -1,0 +1,42 @@
+include head
+body
+	.wrapper.main
+		img(src="img/land.jpg" alt=""  class="land")
+		img(src="img/hometext.png" usemap="#map" class="blink hometext")
+		map(name="map")
+			area(shape="rect" coords="220, 332, 513, 665"  href="strategic.html")
+			
+			area(shape="rect" coords="807, 334, 1080, 666" href="operations.html")
+			area(shape="rect" class="imagehover" coords="1370, 330, 1658, 673" href="advancedtech.html")
+
+	
+		img(class="logo" src="img/logo.png")
+		ul.menu
+			a(href="index.html"): li.blue Home
+			a(href="wedo.html"): li.purple What we do
+			a(href="weare.html"): li.yellow Who we are
+			a(href="contact.html"): li.green Contact
+
+		
+
+	.divider
+	
+	//- footer
+	.wrapper.footer
+		.center
+			.quote 
+				| “If you don’t know where you’re going any road will take you there.” 
+			.autor - Lewis Carroll
+			.service 
+				img(src="img/thumb.png").thumb
+				.text
+					|At KEITH SWIEDNICKI INTERNATIONAL, we bring over 30 Years of Proven Global Supply Chain Consulting Experience to help your company ﬁnd the best road and choose the right supply chain solution.
+				.center
+					i.fa.fa-phone: a(href="tel:5146790362"): .phone 514 679-0362
+					i.fa.fa-phone: a(href="tel:9415257339"): .phone 941-525-7339
+
+
+
+	script(src="js/jquery.min.js")
+	script(src="js/jquery.rwdImageMaps.min.js")
+	script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
