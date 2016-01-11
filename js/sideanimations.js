@@ -1,4 +1,3 @@
-
 $('.close').click(function() {
 	$(this).parent('.sidetext').animate({width:'toggle'},350);
 });
@@ -14,6 +13,10 @@ $('area').hover(
   
 $('.area').click(function() {
   $('.sidetext').hide();
+});
+
+$('#door1').click(function(event) {
+  window.location.href = "strategic.html";
 });
 
 //abrir menu lateral

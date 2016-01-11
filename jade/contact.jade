@@ -1,6 +1,7 @@
 include head
 
 body
+	.mobilemenu Menu<span>▼</span>
 	.wrapper.section_bg.greenbg
 		img(class="logo" src="img/logo.png")
 		ul.menu
@@ -9,6 +10,8 @@ body
 			a(href="weare.html"): li.yellow Who we are
 			a(href="contact.html"): li.select Contact
 		h1 CONTACT
+	
+
 	.center.clear
 		.contact-card.clear
 			img(src="img/map.png")
@@ -23,5 +26,7 @@ body
 			img(src="img/mail.png")
 			.contact-info 
 				a(href="mailto:info@ksinternational.me") info@ksinternational.me
-
+	
+	script(src="js/jquery.min.js")
+	script(src="js/mobile.js")
 	include footer

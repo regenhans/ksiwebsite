@@ -4,20 +4,27 @@ body
 		img(src="img/land.jpg" alt=""  class="land")
 		img(src="img/hometext.png" usemap="#map" class="blink hometext")
 		map(name="map")
-			area(shape="rect" coords="220, 332, 513, 665"  href="strategic.html")
-			
+			area(shape="rect" coords="220, 332, 513, 665"  id="door1" href="strategic.html")
 			area(shape="rect" coords="807, 334, 1080, 666" href="operations.html")
 			area(shape="rect" class="imagehover" coords="1370, 330, 1658, 673" href="advancedtech.html")
 
 	
 		img(class="logo" src="img/logo.png")
+		.mobilemenu Menu<span>▼</span>
 		ul.menu
 			a(href="index.html"): li.blue Home
 			a(href="wedo.html"): li.purple What we do
 			a(href="weare.html"): li.yellow Who we are
 			a(href="contact.html"): li.green Contact
 
-		
+	.mobile-index
+		.door1 
+			a(href="strategic.html").doortext Strategic
+		.door2 
+			a(href="operations.html").doortext Tactical
+		.door3 
+			a(href="advancedtech.html").doortext Technology
+
 
 	.divider
 	
@@ -37,6 +44,9 @@ body
 
 
 
+	//- script(src="js/jquery.min.js")
 	script(src="js/jquery.min.js")
+	script(src="js/mobile.js")
 	script(src="js/jquery.rwdImageMaps.min.js")
 	script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
+	

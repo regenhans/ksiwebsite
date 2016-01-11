@@ -7,3 +7,44 @@
 .hometext
 	position: relative
 	z-index: 10
+.mobile-index
+	display: none
+	.door1
+		background-image: url('../img/puertas_mobil/puerta_m1.png')
+		background-position: center
+		background-size: cover 
+		height: 500px
+		position: relative
+	.door2
+		background-image: url('../img/puertas_mobil/puerta_m2.png')
+		background-position: center
+		background-size: cover 
+		height: 500px
+		position: relative
+	.door3
+		background-image: url('../img/puertas_mobil/puerta_m3.png')
+		background-position: center
+		background-size: cover 
+		height: 500px
+		position: relative
+	.doortext
+		width: 100%
+		height: 100%
+		position: absolute
+		text-align: center
+		transform: translateY(50%)
+		-webkit-transform: translateY(50%)
+		-ms-transform: translateY(50%)
+		color: white
+		font-size: 50px
+		font-family: $din-bold
+
+
+@media screen and(max-width:900px)
+
+	.land, .hometext
+		display: none
+
+	.mobile-index
+		display: block
+

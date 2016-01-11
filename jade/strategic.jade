@@ -21,11 +21,25 @@ body
 			.orangebox.eval 3PL EVALUATION & SELECTION
 
 			img(class="logo" src="img/logo.png")
+			.mobilemenu Menu<span>▼</span>
 			ul.menu
 				a(href="index.html"): li.blue Home
 				a(href="wedo.html"): li.purple What we do
 				a(href="weare.html"): li.yellow Who we are
 				a(href="contact.html"): li.green Contact
+		.mobile-maps
+			img(src="img/worldmobile.jpg" class="mobilemap")
+			img(src="img/dots_mobile.png" ,usemap="#mobilemap" class="mobiledots")
+			map#mobilemap(name='mobilemap')
+				
+				area(id="orangemobile" alt='', title='', shape='poly', coords='354,1100,328,1105,305,1120,290,1143,285,1169,290,1195,305,1218,328,1233,354,1238,380,1233,403,1218,418,1195,423,1169,418,1143,403,1120,380,1105', style='outline:none;', target='_self')
+				area(id="bluemobile" alt='', title='', shape='poly', coords='401,998,393,1000,385,1004,381,1012,379,1020,381,1028,385,1036,393,1040,401,1042,409,1040,417,1036,421,1028,423,1020,421,1012,417,1004,409,1000', style='outline:none;', target='_self')
+				area(id="purplemobile" alt='', title='', shape='poly', coords='260,831,235,836,214,850,200,871,195,896,200,921,214,942,235,956,260,961,285,956,306,942,320,921,325,896,320,871,306,850,285,836', style='outline:none;', target='_self')
+				area(id="pinkmobile" alt='', shape='poly', coords='628,841,599,847,575,863,559,887,553,916,559,945,575,969,599,985,628,991,657,985,681,969,697,945,703,916,697,887,681,863,657,847', style='outline:none;', target='_self')
+
+	
+
+
 
 		#dist.sidetext.orangeside
 			img(class="close" title="close" alt="close" id="close" src="img/close.png")
@@ -132,5 +146,10 @@ body
 
 	script(src="js/jquery.min.js")
 	script(src="js/jquery.rwdImageMaps.min.js")
+	script(src="js/loadfiles.js")
 	script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
-	script(src="js/sideanimations.js")
+	
+
+
+
+

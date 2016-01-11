@@ -8,7 +8,6 @@
 	z-index: -1
 .dots
 	position: relative
-	
 	z-index: 10
 .blink
 	animation: blink 2s steps(5, start) infinite
@@ -145,4 +144,40 @@
 	p
 		margin-top: $space*2
 		font-family: $din-mid
+
+.mobile-maps
+	display: none
+
+@media screen and(max-width: 900px)
+	.total
+		height: auto
+
+	.sidetext
+		+col(4/4)
+		width: 80%
+		right: -10px
+
+	.worldbg, .storage, .techbg, .dots
+		display: none
+
+	.mobile-maps
+		position: relative
+		display: block
+		height: auto
+		.mobilemap
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			z-index: -1
+		.mobiledots
+			position: relative
+			z-index: 10
+
+
+
+
+
+
+
 

@@ -4,6 +4,8 @@
 	position: absolute
 	top: $space
 	left: $space*5
+.mobilemenu
+	display: none
 .menu
 	position: absolute
 	z-index: 20
@@ -58,3 +60,72 @@
 			color: $gray
 	.whitetxt
 		color: white
+
+
+@media screen and(max-width:900px)
+	
+	.logo, .menu
+		position: static
+	.logo
+		padding-top: 20px
+	.mobilemenu
+		display: block
+		text-align: center
+		padding: 20px 0px
+		background: cream
+		font-family: $din-bold
+		font-size: 1.5em
+		margin-top: 20px
+		span
+			font-size: 14px
+			color: $gray
+	.menu
+		margin-right: 0px
+		display: none
+
+	.menu a li
+		display: block
+		margin-left: 0px
+		width: auto
+		padding: none
+		color: white
+	.blue
+		border-top: none
+		background: $blue
+
+	.purple
+		border-top: none
+		background: $purple
+	.pink
+		border-top: none
+		background: $pink
+
+	.yellow
+		border-top: none
+		background: $yellow
+
+	.green
+		border-top: none
+		background: $green
+	.select
+		color: black
+		border-top: none
+		background: white
+
+	.menu .select
+		background: white
+		color: $gray
+
+
+
+
+
+
+
+
+
+
+
+
+
+
