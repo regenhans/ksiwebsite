@@ -1,35 +1,29 @@
 include head
 
 body
+	.mobilemenu Menu<span>▼</span>
 	.wrapper.section_bg.orangebg
-		img(class="logo" src="img/logo-w.png")
+		a(class="logo" href="index.html"): img( src="img/logo-w.png")
 		ul.menu
 			a(href="index.html"): li.blue.whitetxt Home
 			a(href="wedo.html"): li.purple.whitetxt What we do
 			a(href="weare.html"): li.select Who we are
 			a(href="contact.html"): li.green.whitetxt Contact
 		h1 Who we are
+		h2 A BOUTIQUE GLOBAL SUPPY CHAIN CONSULTING FIRM WHICH PROVIDES COMPREHENSIVE ANALYSIS APPROACH ENSURING OUR TACTICAL AND STRATEGIC RECOMMENDATIONS ARE VIABLE
 
 	.center.clear
 		.y_quote 
-			| “If you don’t know where you’re going 
+			| “If you don’t know where you’re going any road will take you there.”
 			br
-			| any road will take you there.” -Lewis Carroll
+			| -Lewis Carroll
 		
 		.maintext.clear
+			| At KEITH SWIEDNICKI INTERNATIONAL, we bring over 30 Years of Proven Global Supply Chain Experience to help your company find the best road and choose the right supply chain solution. We know that finding the best solution, which ensures your company gains the increased competitive advantage and results it needs, is a delicate mix of both art and science.
+			br
+			br
 			
-			|At KEITH SWIEDNICKI INTERNATIONAL, we bring over 30 Years of Proven Global Supply Chain Experience to
-			|help your company find the best road and choose the right supply chain solution.
-			|We know that finding the best solution, which ensures your company gains the increased
-			|competitive advantage and results it needs, is a delicate mix of both art and science. At KEITH SWIEDNICKI
-			|INTERNATIONAL (KSi) we’ve mastered that mix of art and science and provide our clients with an unparalleled
-			|level of expertise and specialized consulting excellence.
-			|Our team is proud of its global reputation as trusted and highly respected Supply Chain Experts. Our
-			|successful involvement in over 1,000 supply chain distribution projects over a wide range of industries, and
-			|our specialized in-depth knowledge of the Food & Grocery Industry has contributed to our reputation as the
-			|“A-Team” of Supply Chain Consultants in the field today.
-			|When your company has supply chain challenges, choosing KSi as your trusted solutions partner is a sound decision.
-
+			| At KEITH SWIEDNICKI INTERNATIONAL (KSi) we’ve mastered that mix of art and science and provide our clients with an unparalleled level of expertise and specialized consulting excellence. Our team is proud of its global reputation as trusted and highly respected Supply Chain Experts. Our successful involvement in over 1,000 supply chain distribution projects over a wide range of industries, and our specialized in-depth knowledge of the Food & Grocery Industry has contributed to our reputation as the “A-Team” of Supply Chain Consultants in the field today. When your company has supply chain challenges, choosing KSi as your trusted solutions partner is a sound decision.
 		hr
 
 		.boss.clear
@@ -49,7 +43,10 @@ body
 				|expect, unparalleled in the industry.”
 
 		.bio.clear
-			.title KEITH SWIEDNICKI PRESIDENT & CEO
+			.title 
+				| KEITH SWIEDNICKI
+				br
+				| PRESIDENT & CEO
 
 			.maintext
 				|For over 30 years Keith has provided top quality supply chain solutions
@@ -64,7 +61,9 @@ body
 				|Logistics.
 				
 
-
+	script(src="js/jquery.min.js")
+	script(src="js/jquery.rwdImageMaps.min.js")
+	script(src="js/loadfiles.js")
 	//- footer
 	include footer
 		

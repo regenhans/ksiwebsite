@@ -1,0 +1,38 @@
+html
+head
+	meta(charset="utf-8")
+	title Keith Swiednicki
+	meta(meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1")
+	meta(name="MobileOptimized" content="320")
+	link(rel="stylesheet" type="text/css" href="css/map.css")
+	link(rel="stylesheet" type="text/css" href="css/font-awesome.min.css")
+
+body
+	img(src="img/dots_mobile.png", width="900", height="1500",  usemap="mobilemap" class="blink mobiledots")
+	
+	map(name='mobilemap')
+		area(shape='rect', coords='898,1498,900,1500', alt='Image Map', style='outline:none;', title='Image Map')
+		area(alt='purple', title='', shape='poly', coords='257,820,227,826,201,843,184,869,178,899,184,929,201,955,227,972,257,978,287,972,313,955,330,929,336,899,330,869,313,843,287,826', style='outline:none;', target='_self')
+		area(alt='blue', title='', shape='poly', coords='352,1092,319,1099,291,1117,273,1145,266,1178,273,1211,291,1239,319,1257,352,1264,385,1257,413,1239,431,1211,438,1178,431,1145,413,1117,385,1099', style='outline:none;', target='_self')
+		area(alt='orange', title='', shape='poly', coords='399,957,373,962,352,977,337,998,332,1024,337,1050,352,1071,373,1086,399,1091,425,1086,446,1071,461,1050,466,1024,461,998,446,977,425,962', style='outline:none;', target='_self')
+		area(alt='pink', title='', shape='poly', coords='628,833,594,840,565,859,546,888,539,922,546,956,565,985,594,1004,628,1011,662,1004,691,985,710,956,717,922,710,888,691,859,662,840', style='outline:none;', target='_self')
+
+	
+
+	//- map(name='mobilemap', id="mobilemap")
+	//- 	area(id="orangemobile" , alt="purple" shape='poly', coords='354,1100,328,1105,305,1120,290,1143,285,1169,290,1195,305,1218,328,1233,354,1238,380,1233,403,1218,418,1195,423,1169,418,1143,403,1120,380,1105', target='_self')
+	//- 	area(id="bluemobile" alt='blue', title='', shape='poly', coords='401,998,393,1000,385,1004,381,1012,379,1020,381,1028,385,1036,393,1040,401,1042,409,1040,417,1036,421,1028,423,1020,421,1012,417,1004,409,1000', style='outline:none;', target='_self')
+	//- 	area(id="purplemobile" alt='orange', title='', shape='poly', coords='260,831,235,836,214,850,200,871,195,896,200,921,214,942,235,956,260,961,285,956,306,942,320,921,325,896,320,871,306,850,285,836', style='outline:none;', target='_self')
+	//- 	area(id="pinkmobile" alt='pink', shape='poly', coords='628,841,599,847,575,863,559,887,553,916,559,945,575,969,599,985,628,991,657,985,681,969,697,945,703,916,697,887,681,863,657,847', style='outline:none;', target='_self')
+
+
+	script(src="js/jquery.min.js")
+	script(src="js/ios-fix.js")
+	script(src="js/jquery.rwdImageMaps.min.js")
+	
+
+	//- script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
+	script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
+
+	script $('area').on('click', function() { alert($(this).attr('alt') + ' clicked');});
+

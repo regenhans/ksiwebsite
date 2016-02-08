@@ -3,13 +3,14 @@ include head
 body
 	.mobilemenu Menu<span>▼</span>
 	.wrapper.section_bg.purplebg
-		img(class="logo" src="img/logo-w.png")
+		a(class="logo" href="index.html"): img( src="img/logo-w.png")
 		ul.menu
 			a(href="index.html"): li.blue.whitetxt Home
 			a(href="wedo.html"): li.select What we do
 			a(href="weare.html"): li.yellow.whitetxt Who we are
 			a(href="contact.html"): li.green.whitetxt Contact
 		h1 WHAT WE DO
+		H2 WE BRING OVER 30 YEARS OF EXPERIENCE TO PROVIDE YOUR COMPANY WITH THE HIGHEST AND MOST UNBIASED GLOBAL SUPPLY CHAIN CONSULTING EXPERTISE
 	.center.clear
 		.feature
 			a(href="strategic.html")
@@ -30,6 +31,7 @@ body
 			h2.clear
 				| ADVANCED TECHNOLOGIES
 	script(src="js/jquery.min.js")
-	script(src="js/mobile.js")
+	script(src="js/jquery.rwdImageMaps.min.js")
+	script(src="js/loadfiles.js")
 	//- footer
 	include footer

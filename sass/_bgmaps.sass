@@ -6,6 +6,8 @@
 	position: absolute
 	top: 0
 	z-index: -1
+.area:hover
+	cursor: pointer
 .dots
 	position: relative
 	z-index: 10
@@ -74,12 +76,13 @@
 		height: 7px
 	.actionbutton
 		background: white
-		color: orange
 		text-align: center
 		width: 50%
-		padding: 10px 0
+		padding: 5px 20px
 		margin: $space 0 $space*5 0
 		font-size: 1.5em
+		a
+			color: orange
 	
 .purpleside
 	background: $purple
@@ -90,12 +93,14 @@
 		height: 7px
 	.actionbutton
 		background: white
-		color: darken($purple, 10%)
+		
 		text-align: center
 		width: 50%
 		padding: 10px 0
 		margin: $space 0 $space*5 0
 		font-size: 1.5em
+		a
+			color: darken($purple, 10%)
 
 .blueside
 	background: $skyblue
@@ -106,12 +111,14 @@
 		height: 7px
 	.actionbutton
 		background: white
-		color: darken($skyblue, 10%)
+		
 		text-align: center
 		width: 50%
 		padding: 10px 0
 		margin: $space 0 $space*5 0
 		font-size: 1.5em
+		a
+			color: darken($skyblue, 10%)
 
 .sidetext
 	color: white
@@ -144,11 +151,16 @@
 	p
 		margin-top: $space*2
 		font-family: $din-mid
+	li
+		list-style-position: inside
+		text-indent: -1em
 
 .mobile-maps
 	display: none
 
 @media screen and(max-width: 900px)
+	html, body
+		width: 100%
 	.total
 		height: auto
 
@@ -161,23 +173,43 @@
 		display: none
 
 	.mobile-maps
-		position: relative
 		display: block
-		height: auto
+
 		.mobilemap
 			position: absolute
 			width: 100%
-			height: 100%
-			top: 0
-			z-index: -1
+			height: auto
+			
+
 		.mobiledots
 			position: relative
 			z-index: 10
+			max-width: 105%
+			height: auto
+
+		
 
 
 
+$iphone-5-port: "only screen and (device-width : 320px)"
 
 
-
+/*@media #{$iphone-5-port}
+	html, body
+		overflow: scroll
+		-webkit-overflow-scrolling: touch
+		overflow-scrolling: touch
+	
+	.mobile-maps
+		position: relative
+		display: block
+		.mobilemap
+			position: static
+			display: block
+			width: 640px
+			height: auto
+		.mobiledots
+			width: 500px
+			height: auto */
 
 

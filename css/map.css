@@ -1,0 +1,11 @@
+/* line 1, ../sass/map.sass */
+div {
+  width: 100%;
+}
+
+/* line 3, ../sass/map.sass */
+img[usemap] {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}

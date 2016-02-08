@@ -1,0 +1,23 @@
+
+<html></html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Keith Swiednicki</title>
+  <meta meta="meta" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+  <meta name="MobileOptimized" content="320"/>
+  <link rel="stylesheet" type="text/css" href="css/map.css"/>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+</head>
+<body><img src="img/dots_mobile.png" width="900" height="1500" usemap="mobilemap" class="blink mobiledots"/><map name="mobilemap">
+    <area shape="rect" coords="898,1498,900,1500" alt="Image Map" style="outline:none;" title="Image Map"/>
+    <area alt="purple" title="" shape="poly" coords="257,820,227,826,201,843,184,869,178,899,184,929,201,955,227,972,257,978,287,972,313,955,330,929,336,899,330,869,313,843,287,826" style="outline:none;" target="_self"/>
+    <area alt="blue" title="" shape="poly" coords="352,1092,319,1099,291,1117,273,1145,266,1178,273,1211,291,1239,319,1257,352,1264,385,1257,413,1239,431,1211,438,1178,431,1145,413,1117,385,1099" style="outline:none;" target="_self"/>
+    <area alt="orange" title="" shape="poly" coords="399,957,373,962,352,977,337,998,332,1024,337,1050,352,1071,373,1086,399,1091,425,1086,446,1071,461,1050,466,1024,461,998,446,977,425,962" style="outline:none;" target="_self"/>
+    <area alt="pink" title="" shape="poly" coords="628,833,594,840,565,859,546,888,539,922,546,956,565,985,594,1004,628,1011,662,1004,691,985,710,956,717,922,710,888,691,859,662,840" style="outline:none;" target="_self"/></map>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ios-fix.js"></script>
+  <script src="js/jquery.rwdImageMaps.min.js"></script>
+  <script>$(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});</script>
+  <script>$('area').on('click', function() { alert($(this).attr('alt') + ' clicked');});</script>
+</body>

@@ -2,10 +2,19 @@
 	height: 400px
 	h1 
 		font-family: $din-mid
-		font-size: 3.5em
+		font-size: 3em
 		color: white
 		text-align: center
-		padding-top: $space*7
+		padding-top: $space*16
+		text-transform: uppercase
+	h2
+		font-family: $din-mid
+		font-size: 1.5em
+		color: white
+		+center(900px)
+		text-align: center
+		line-height: 150%
+		padding-top: $space*2
 		text-transform: uppercase
 .orangebg
 	background: $orange
@@ -13,3 +22,7 @@
 	background: $purple
 .greenbg
 	background: $green
+
+@media screen and(max-width: 900px)
+	.section_bg h1
+		padding-top: $space*3

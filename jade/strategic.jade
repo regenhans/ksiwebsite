@@ -3,41 +3,46 @@ body
 	.total
 		.wrapper.main
 			img(src="img/worldfull.jpg" alt=""  , class="worldbg")
-			
 			img(src="img/dots.png" ,usemap="#map" class="dots blink")
 			map#Map(name='map')
 
-				area(id="orangeclick", class="area", alt='', title='', href='#', shape='poly', coords='346,888,348,928,387,930,386,890')
-				area(id='purpleclick', class="area", title='', href='#', shape='poly', coords='265,653,270,681,293,680,293,658')
-				area(id="blueclick", class="area", href='#', shape='poly', coords='395,763,417,763,422,790,394,788')
-				area(id="pinkclick",class="area", href='#', shape='poly', coords='599,674,602,702,630,702,627,672')
+				area(id="orangeclick", data-target='#transport', onmouseover='getdesc(this)', onmouseout='removedesc(this)', onclick='openside(this)', class="area",  shape='poly', coords='346,888,348,928,387,930,386,890')
+				area(id='purpleclick', data-target='#dist', onmouseover='getdesc(this)', onmouseout='removedesc(this)', onclick='openside(this)',class="area", shape='poly', coords='265,653,270,681,293,680,293,658')
+				area(id="blueclick",data-target='#insource', onmouseover='getdesc(this)', onmouseout='removedesc(this)', onclick='openside(this)', class="area", shape='poly', coords='395,763,417,763,422,790,394,788')
+				area(id="pinkclick", data-target='#evaluation', onmouseover='getdesc(this)', onmouseout='removedesc(this)', onclick='openside(this)', class="area", shape='poly', coords='599,674,602,702,630,702,627,672')
 			
 
 
 			//- TEXTOS SOBRE MOUSE
-			.orangebox.distribution Distribution Network Optimization
-			.orangebox.trans Transportation Optimization
-			.orangebox.ins INSOURCING VS. OUTSOURCING
-			.orangebox.eval 3PL EVALUATION & SELECTION
+			.orangebox.dist Distribution Network Optimization
+			.orangebox.transport Transportation Optimization
+			.orangebox.insource INSOURCING VS. OUTSOURCING
+			.orangebox.evaluation 3PL EVALUATION & SELECTION
 
-			img(class="logo" src="img/logo.png")
+			a(class="logo" href="index.html"): img( src="img/logo.png")
 			.mobilemenu Menu<span>▼</span>
 			ul.menu
 				a(href="index.html"): li.blue Home
 				a(href="wedo.html"): li.purple What we do
 				a(href="weare.html"): li.yellow Who we are
 				a(href="contact.html"): li.green Contact
+		
 		.mobile-maps
-			img(src="img/worldmobile.jpg" class="mobilemap")
-			img(src="img/dots_mobile.png" ,usemap="#mobilemap" class="mobiledots")
+			img(src="img/worldmobile.jpg", class="mobilemap")
+			img(src="img/dots_mobile.png", width="900", height="1500",  usemap="#mobilemap" class="blink mobiledots")
 			map#mobilemap(name='mobilemap')
 				
-				area(id="orangemobile" alt='', title='', shape='poly', coords='354,1100,328,1105,305,1120,290,1143,285,1169,290,1195,305,1218,328,1233,354,1238,380,1233,403,1218,418,1195,423,1169,418,1143,403,1120,380,1105', style='outline:none;', target='_self')
-				area(id="bluemobile" alt='', title='', shape='poly', coords='401,998,393,1000,385,1004,381,1012,379,1020,381,1028,385,1036,393,1040,401,1042,409,1040,417,1036,421,1028,423,1020,421,1012,417,1004,409,1000', style='outline:none;', target='_self')
-				area(id="purplemobile" alt='', title='', shape='poly', coords='260,831,235,836,214,850,200,871,195,896,200,921,214,942,235,956,260,961,285,956,306,942,320,921,325,896,320,871,306,850,285,836', style='outline:none;', target='_self')
-				area(id="pinkmobile" alt='', shape='poly', coords='628,841,599,847,575,863,559,887,553,916,559,945,575,969,599,985,628,991,657,985,681,969,697,945,703,916,697,887,681,863,657,847', style='outline:none;', target='_self')
-
-	
+				area(shape='rect', coords='898,1498,900,1500', alt='Image Map', style='outline:none;', title='Image Map')
+				area(id="orangemobile", alt='orange', title='', shape='poly', coords='257,820,227,826,201,843,184,869,178,899,184,929,201,955,227,972,257,978,287,972,313,955,330,929,336,899,330,869,313,843,287,826', style='outline:none;', target='_self')
+				area(id="purplemobile" ,alt='purple', title='', shape='poly', coords='352,1092,319,1099,291,1117,273,1145,266,1178,273,1211,291,1239,319,1257,352,1264,385,1257,413,1239,431,1211,438,1178,431,1145,413,1117,385,1099', style='outline:none;', target='_self')
+				area(id="bluemobile", alt='blue', title='', shape='poly', coords='399,957,373,962,352,977,337,998,332,1024,337,1050,352,1071,373,1086,399,1091,425,1086,446,1071,461,1050,466,1024,461,998,446,977,425,962', style='outline:none;', target='_self')
+				area(id="pinkmobile", alt='pink', title='', shape='poly', coords='628,833,594,840,565,859,546,888,539,922,546,956,565,985,594,1004,628,1011,662,1004,691,985,710,956,717,922,710,888,691,859,662,840', style='outline:none;', target='_self')
+				
+				//- area(id="orangemobile"  shape='poly', coords='354,1100,328,1105,305,1120,290,1143,285,1169,290,1195,305,1218,328,1233,354,1238,380,1233,403,1218,418,1195,423,1169,418,1143,403,1120,380,1105', style='outline:none;', target='_self')
+				//- area(id="bluemobile" alt='', title='', shape='poly', coords='401,998,393,1000,385,1004,381,1012,379,1020,381,1028,385,1036,393,1040,401,1042,409,1040,417,1036,421,1028,423,1020,421,1012,417,1004,409,1000', style='outline:none;', target='_self')
+				//- area(id="purplemobile" alt='', title='', shape='poly', coords='260,831,235,836,214,850,200,871,195,896,200,921,214,942,235,956,260,961,285,956,306,942,320,921,325,896,320,871,306,850,285,836', style='outline:none;', target='_self')
+				//- area(id="pinkmobile" alt='', shape='poly', coords='628,841,599,847,575,863,559,887,553,916,559,945,575,969,599,985,628,991,657,985,681,969,697,945,703,916,697,887,681,863,657,847', style='outline:none;', target='_self')
+		
 
 
 
@@ -46,6 +51,7 @@ body
 			img(class="sideicon" src="img/truck.png")
 			h2 Distribution network optimization
 			h3 Optimization for supply chain networks
+			br
 			p
 				|OUR BOTTOM-UP APPROACH ENSURES THAT ALL OF
 				| OUR RECOMMENDATIONS ARE PRACTICAL AND CAN BE
@@ -55,99 +61,83 @@ body
 				br
 				|OUR GOAL IS TO ANSWER COMPLEX QUESTIONS SUCH
 				|AS:
-				br
-				br
-				|• HOW CAN I BEST SERVE MY EXISTING AND FUTURE
-				|MARKETS?
-				br
-				br
-				|• HOW MANY DISTRIBUTION CENTERS SHOULD I HAVE?
-				br
-				br
-				|•WHERE SHOULD THEY BE LOCATED?
-				br
-				br
-				|• HOW BIG SHOULD THEY BE?
-				br
-				br
-				|• WHAT ITEMS SHOULD BE STOCKED AT EACH DC?
-				br
-				br
-				|• WHAT IS THE IMPACT OF CHANGING INVENTORY
-				|LEVELS?
-				br
-				br
-				|• WHAT IS THE ROADMAP IN YEARS FOR ME TO ALLOCATE
-				|CAPITAL AND PLAN EXPANSIONS?
-				br
-				br
-				|• HOW SHOULD EACH DC OPERATE INSIDE THE 4 WALLS
-				br
-				br
-				|• SHOULD I USE AUTOMATION, MECHANIZATION,
-				|CONVENTIONAL SYSTEMS OR A HYBRID?
-				br
-				br
-				|• HOW CAN I BEST REUSE EXISTING CAPACITY?
+			br
+			li HOW CAN I BEST SERVE MY EXISTING AND FUTURE MARKETS?
+			br
+			li HOW MANY DISTRIBUTION CENTERS SHOULD I HAVE?
+			br
+			li WHERE SHOULD THEY BE LOCATED?
+			br
+			li HOW BIG SHOULD THEY BE?
+			br
+			li WHAT ITEMS SHOULD BE STOCKED AT EACH DC?
+			br
+			li WHAT IS THE IMPACT OF CHANGING INVENTORY LEVELS?
+			br
+			li WHAT IS THE ROADMAP IN YEARS FOR ME TO ALLOCATE CAPITAL AND PLAN EXPANSIONS?
+			br
+			li HOW SHOULD EACH DC OPERATE INSIDE THE 4 WALLS
+			br
+			li SHOULD I USE AUTOMATION, MECHANIZATION, CONVENTIONAL SYSTEMS OR A HYBRID?
+			br
+			li HOW CAN I BEST REUSE EXISTING CAPACITY?
 			.divline
 			h3 Want to learn more?
-			.actionbutton  Click here
+			.cf
+			br
+			.actionbutton: a(href="learnmore.html")  Click here
 
 		#transport.sidetext.orangeside
 			img(class="close" title="close" alt="close"  src="img/close.png")
 			img(class="sideicon" src="img/truck.png")
 			H2 Distribution network optimization
 			h3 TRANSPORTATION OPTIMIZATION
-			
-			p  
-				|• PERFORM DETAILED ROUTING TO OPTIMIZE YOUR FLEET OR CARRIER
-				br
-				br
-				|• Evaluating transportation budgets and operations to identify cost savings and service improvement opportunities
+			br
+			li PERFORM DETAILED ROUTING TO OPTIMIZE YOUR FLEET OR CARRIER
+			br
+			li Evaluating transportation budgets and operations to identify cost savings and service improvement opportunities
 			.divline
 			h3 Want to learn more?
-			.actionbutton  Click here
+			.actionbutton: a(href="learnmore.html")  Click here
 
 		#insource.sidetext.orangeside
 			img(class="close" title="close" alt="close"  src="img/close.png")
 			img(class="sideicon" src="img/truck.png")
 			h2 Distribution network optimization
 			h3 INSOURCING VS. OUTSOURCING
-			p
-				br
-				br
-				| • EVALUATING THE economics OF OUTSOURCING versus self-distribution of warehouse operations considering a third party service provider (3pl) or other distributors.
-				br
-				br
-				| • EVALUATE CURRENT DISTRIBUTION OPERATIONS AND DETERMINE AN IMPROVED BENCHMARK TO COMPARE TO A 3PL PROVIDER. 
-				br
-				br
-				| • PERFORM FINANCIAL & OPERATIONAL DISTRIBUTION MODELLING
+			br
+
+			li EVALUATING THE economics OF OUTSOURCING versus self-distribution of warehouse operations considering a third party service provider (3pl) or other distributors.
+			br
+			li EVALUATE CURRENT DISTRIBUTION OPERATIONS AND DETERMINE AN IMPROVED BENCHMARK TO COMPARE TO A 3PL PROVIDER. 
+			br
+			li PERFORM FINANCIAL & OPERATIONAL DISTRIBUTION MODELLING
 			.divline
 			h3 Want to learn more?
-			.actionbutton  Click here
+			.actionbutton: a(href="learnmore.html")  Click here
 
 		#evaluation.sidetext.orangeside
 			img(class="close" title="close" alt="close"  src="img/close.png")
 			img(class="sideicon" src="img/truck.png")
 			h2 Distribution network optimization
 			h3 3PL EVALUATION & SELECTION
-			p 
-				| • DEVELOP A 3PL OUTSOURCING REQUEST FOR PROPOSAL THAT IS SPECIFIC TO YOUR BUSINESS NEEDS.
-				br
-				br
-				| • PERFORM DETAILED ROUTING TO OPTIMIZE YOUR FLEET OR CARRIER
+			br
+			li DEVELOP A 3PL OUTSOURCING REQUEST FOR PROPOSAL THAT IS SPECIFIC TO YOUR BUSINESS NEEDS.
 			.divline
 			h3 Want to learn more?
-			.actionbutton  Click here
+			.actionbutton: a(href="learnmore.html")  Click here
 
 		//- footer
 		include footer
 
 	script(src="js/jquery.min.js")
-	script(src="js/jquery.rwdImageMaps.min.js")
+	script(src="js/responsivemap.js")
 	script(src="js/loadfiles.js")
+	script(src="js/ios-fix.js")
+	
 	script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
+
+	//-script $('area').on('click', function() { alert($(this).attr('alt') + ' clicked');});
 	
 
 

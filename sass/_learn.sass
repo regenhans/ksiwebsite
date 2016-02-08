@@ -1,0 +1,96 @@
+
+.cubesection
+	height: 100%
+	.mobilemenu
+		z-index: 100
+.cube
+	height: 100%
+
+.rubik
+	+span(1/2)
+	img
+		user-drag: none
+		user-select: none
+		-moz-user-select: none
+		-webkit-user-drag: none
+		-webkit-user-select: none
+		-ms-user-select: none
+		max-width: 500px
+		display: block
+		margin-left: auto 
+		margin-top: 150px
+.rubikinfo
+	+span(1/2)
+	margin-top: 200px
+	font-family: $din-mid
+	font-size: 17px
+	color: $gray
+	.kscont
+		margin-bottom: $space
+	table td
+		vertical-align: middle
+	table td
+		padding-top: $space
+	table td img
+		margin-right: $space
+	table td.bold a
+		color: $gray
+		font-family: $din-bold
+
+.special-footer
+	background: black
+	position: relative
+	height: 120px
+	transform: translateY(5px)
+	img
+		position: absolute
+		left: $space
+		max-width: 600px
+		top: $space
+	.purpletag
+		right: $space
+		text-transform: uppercase
+		font-family: $din-bold
+		font-size: 1.3em
+		color: white
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: $space*5
+		padding: 5px $space
+		background: $purple
+
+@media screen and(min-width: 1500px)
+	.rubik img
+		max-width: 800px
+		margin-top: 200px
+		margin-bottom: 100px
+	.rubikinfo
+		margin-top: 400px
+@media screen and(max-width: 900px)
+	.cubesection
+		height: auto
+	.rubik
+		+stack()
+	.rubikinfo
+		+stack()
+		margin-top: $space
+	.rubik img
+		margin-top: 50px
+		max-width: 90%
+		left: 0
+		margin-right: auto 
+	.special-footer
+		height: auto
+	.special-footer img
+		
+		max-width: 97%
+		padding: 20px 10px
+		position: static !important
+		.purpletag
+			display: block
+			position: static !important
+			top: 50px
+
+	.divider
+		width: auto

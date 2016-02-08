@@ -2,106 +2,140 @@ include head
 body
 	.total
 		.wrapper.main
-			img(src="img/keyboard.jpg" alt="" usemap="#map" class="techbg")
-
+			img(src="img/keyboard.jpg" class="worldbg")
+			img(src="img/text_keys.png" alt="" usemap="#map" class="dots blink")
 			map(name='map')
-				area(id="purplekey", class="area", hidefocus="true" , alt='', title='', href='#', shape='poly', coords='589,321,566,320,567,355,555,359,568,396,627,403,627,355,596,341')
-				area(id="bluekey", class="area", alt='', title='', href='#', shape='poly', coords='718,713,717,745,702,754,723,788,774,795,775,747,743,733,737,711')
-				area(id="orangekey", class="area", alt='', title='', href='#', shape='poly', coords='1133,959,1135,928,1156,927,1156,949,1194,963,1191,995,1183,1008,1144,1010,1123,983,1118,969')
+			
+				area(id="purplekey", data-target='#systems', onmouseover='getdesc(this)', onmouseout='removedesc(this)', onclick='openside(this)', class="area", shape='poly', coords='668,294,749,391,1133,258,1051,164', style='outline:none;', target='_self')
+
+				area( id="bluekey", data-target='#elearning', onmouseover='getdesc(this)', onmouseout='removedesc(this)', onclick='openside(this)', class="area", alt='', title='elearning', shape='poly', coords='853,631,930,748,1482,535,1388,441', style='outline:none;', target='_self')
+
+				area(id="orangekey", data-target='#automation', onmouseover='getdesc(this)', onmouseout='removedesc(this)', onclick='openside(this)', class="area", shape='poly', coords='1142,1047,1232,1146,1896,841,1796,765', style='outline:none;', target='_self')
+
 
 			//- TEXTOS SOBRE MOUSE
 			.bluebox.systems Systems
 			.bluebox.elearning E-LEARNING
 			.bluebox.automation  AUTOMATION		
 
-			img(class="logo" src="img/logo.png")
+			a(class="logo" href="index.html"): img( src="img/logo.png")
+			.mobilemenu Menu<span>▼</span>
 			ul.menu
 				a(href="index.html"): li.blue Home
 				a(href="wedo.html"): li.purple What we do
 				a(href="weare.html"): li.yellow Who we are
 				a(href="contact.html"): li.green Contact
 
-		
+		.mobile-maps
+			img(src="img/keyboard_m.jpg" class="mobilemap")
+			img(src="img/keyboard_text_m.png" ,width="901", height="1501", usemap="#mobilemap" class="mobiledots blink")
+			map#mobilemap(name='mobilemap')
+				area(shape='rect', coords='899,1499,901,1501', alt='Image Map', style='outline:none;', title='Image Map')
+				area(id="purplekeym", alt='purple', title='', shape='poly', coords='5,538,732,673,575,264,2,139', style='outline:none;', target='_self')
+				area(id="bluekeym" , alt='blue', title='',  shape='poly', coords='1,559,730,692,881,1153,5,1013', style='outline:none;', target='_self')
+				area(id="orangekeym", alt='yellow', title='',  shape='poly', coords='899,1158,51,1038,145,1504,896,1498', style='outline:none;', target='_self')
+
+				
+				//- area(id="purplekeym"  alt='', title='purple', shape='poly', coords='11,151,589,273,732,690,14,547', style='outline:none;', target='_self')
+				//- area(id="bluekeym" shape='poly', coords='739,716,8,562,9,1015,893,1155', style='outline:none;', target='_self')
+				//- area(id="orangekeym", shape='poly', coords='142,1458,32,1046,900,1170,893,1501,213,1502', style='outline:none;', target='_self')
+
+
+
+
 		#systems.sidetext.blueside.over
 			img(class="close" title="close" alt="close" id="close" src="img/close.png")
 			img(class="sideicon" src="img/monitor.png")
 			h2 ADVANCED TECHNOLOGIES
 			h3 SYSTEMS
-			p
-				|EVALUATE BUSINESS AND LOGISTICS OPERATIONS TO IDENTIFY SOFTWARE SOLUTION REQUIREMENTS AS WELL AS SOFTWARE AND HARDWARE PARTNERS AND SOLUTIONS TO ENSURE THE BEST FIT WITH YOUR CUSTOMER-SPECIFIC REQUIREMENTS AT LEAST RISK AND COST; INCLUDING BUT NOT LIMITED TO:
-				br
-				br
-				|• CUSTOMIZED SOFTWARE APPLICATIONS (SLOTTING ENHANCEMENT, STRATEGIC 
-				|• MODELLING, PICK LINE MODELLING)
-				br
-				br
-				|• MATERIAL HANDING, AUTOMATION, VOICE, WMS EVALUATION AND SELECTION
-				br
-				br
-				|• HARDWARE & SOFTWARE IDENTIFICATION
+
+			li EVALUATE BUSINESS AND LOGISTICS OPERATIONS TO IDENTIFY SOFTWARE SOLUTION REQUIREMENTS AS WELL AS SOFTWARE AND HARDWARE PARTNERS AND SOLUTIONS TO ENSURE THE BEST FIT WITH YOUR CUSTOMER-SPECIFIC REQUIREMENTS AT LEAST RISK AND COST;
+			br
+			| INCLUDING BUT NOT LIMITED TO:
+			br
+			br
+			li CUSTOMIZED SOFTWARE APPLICATIONS (SLOTTING ENHANCEMENT, STRATEGIC MODELING, PICK LINE MODELLING)
+			br
+			li MATERIAL HANDLING, AUTOMATION, VOICE, WMS EVALUATION AND SELECTION
+			br
+			li HARDWARE & SOFTWARE IDENTIFICATION
 
 			.divline
 			h3 Want to learn more?
-			.actionbutton  Click here	
+			.actionbutton: a(href="learnmore.html")  Click here	
 
 		#elearning.sidetext.blueside
 			img(class="close" title="close" alt="close" id="close" src="img/close.png")
 			img(class="sideicon" src="img/monitor.png")
 			h2 ADVANCED TECHNOLOGIES
-			h3  E-LEARNING
-			p
-				|EVALUATE BUSINESS AND LOGISTICS OPERATIONS TO IDENTIFY SOFTWARE SOLUTION REQUIREMENTS AS WELL AS SOFTWARE AND HARDWARE PARTNERS AND SOLUTIONS TO ENSURE THE BEST FIT WITH YOUR CUSTOMER-SPECIFIC REQUIREMENTS AT LEAST RISK AND COST; INCLUDING BUT NOT LIMITED TO:
-				br
-				br
-				|• EDUCATIONAL OPPORTUNITIES
-				br
-				|• UNIVERSITY/ COLLEGE PROGRAMS
-				br      
-				|• CUSTOMIZED PROGRAMS
-				br
-				|• LIST OF COURSES
-				br
-				|• INTERNET CONNECTIONS
-				br
-				|• WESITES
-				br
-				|• BLOGS
-				br
-				|• FOOD
-				br
-				|• SUPPLY CHAIN
-				br
-				|• BOOKS/MAGAZINES/NEWSLETTERS
-				br
-				|• STUDIES
-				br
-				|• ORGANIZATIONS
-				br
-				|• CASE STUDIES
-				br
-				|• SEMINARS
-				br
-				|• SUCCESS STORIES
+			h3 E-LEARNING
+			br
+			li  EDUCATIONAL OPPORTUNITIES
+			br
+			li  UNIVERSITY/ COLLEGE PROGRAMS
+			br
+			li  CUSTOMIZED PROGRAMS
+			br
+			li  LIST OF COURSES
+			br
+			li  INTERNET CONNECTIONS
+			br
+			li WEBSITES
+			br
+			li BLOGS
+			br
+			li FOOD
+			br
+			li SUPPLY CHAIN
+			br
+			li BOOKS/MAGAZINES/NEWSLETTERS
+			br
+			li STUDIES
+			br
+			li ORGANIZATIONS
+			br
+			li CASE STUDIES
+			br
+			li SEMINARS
+			br
+			li SUCCESS STORIES
 
 			.divline
 			h3 Want to learn more?
-			.actionbutton  Click here	
+			.actionbutton: a(href="learnmore.html")  Click here	
 
 		#automation.sidetext.blueside
 			img(class="close" title="close" alt="close" id="close" src="img/close.png")
 			img(class="sideicon" src="img/monitor.png")
 			h2 ADVANCED TECHNOLOGIES
 			h3  AUTOMATION
-			p
-				br
-				|• AUTOMATION AND E-COMMERCE SOLUTIONS
+			li AUTOMATION AND E-COMMERCE SOLUTIONS
+			br
+			li INCREASED THROUGHPUT
+			br
+			li REDUCED OPERATING LABOR AND PRODUCT “TOUCHES”
+			br
+			li REDUCED ENERGY COSTS
+			br
+			li ACCOMMODATION OF ADDITIONAL SKUS
+			br
+			li INCREASED CAPACITY OF EXISTING DC FOOTPRINT
+			br
+			li CREATION OF “STORE FRIENDLY” DELIVERIES
+			br
+			li IMPROVED ERGONOMICS
 
 			.divline
 			h3 Want to learn more?
-			.actionbutton  Click here	
+			.actionbutton: a(href="learnmore.html")  Click here	
 		//- footer
 		include footer
 	script(src="js/jquery.min.js")
+	script(src="js/ios-fix.js")
 	script(src="js/jquery.rwdImageMaps.min.js")
+	script(src="js/loadfiles.js")
+	//- script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
 	script $(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});
-	script(src="js/sideanimations.js")
+	//- script $('area').on('click', function() { alert($(this).attr('alt') + ' clicked');});
+
+
